@@ -8,6 +8,8 @@ import ProductList from "@/components/product-list";
 import getProduct from "@/services/get-product";
 import getProducts from "@/services/get-products";
 
+export const revalidate = 0;
+
 interface ProductPageProps {
   params: { productId: string };
 }
