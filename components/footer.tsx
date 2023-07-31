@@ -1,0 +1,13 @@
+interface FooterProps {}
+
+export default function Footer({}: FooterProps) {
+  return (
+    <footer className="bg-white border-t">
+      <div className="mx-auto py-10">
+        <p className="text-center text-xs text-black">
+          &copy; 2023 AllMart Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
