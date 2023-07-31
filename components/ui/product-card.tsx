@@ -2,6 +2,7 @@
 
 // React and Next.
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // External packages.
 import { Expand, ShoppingCart } from "lucide-react";
@@ -18,8 +19,17 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ data }: ProductCardProps) {
+  const router = useRouter();
+
+  function handleClick() {
+    router.push(`/product/${data?.id}`);
+  }
+
   return (
-    <div className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
+    <div
+      onClick={handleClick}
+      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4"
+    >
       {/* Product image and actions. */}
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
